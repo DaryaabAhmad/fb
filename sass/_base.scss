@@ -2,10 +2,12 @@
     --color-black: #000;
 
     --color-white: #FFFFFF;
+    --color-text: #E4E6EB;
+
     // --color-white-1: #f0f2f5;
-    --color-svg: #E4E6EB;
+    // --color-svg: #E4E6EB;
+    --color-svg: #B0B3B8;
     --color-white-ligth-2: #808185;
-    --color-grey: #B0B3B8;
     
     --color-dark: #18191A;
     --color-dark-light: #242526;
@@ -97,6 +99,7 @@ body {
     background-color: var(--color-dark) ;
     color: var(--color-white-ligth-1);
     overflow-x: hidden;
+	overflow: auto;
 
     scroll-behavior: smooth;
     min-height: 100dvh;
