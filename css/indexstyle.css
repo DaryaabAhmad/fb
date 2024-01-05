@@ -331,7 +331,7 @@ body {
 
 .left-side {
   background-color: transparent;
-  width: 21.535vw;
+  width: 22vw;
   overflow: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -356,24 +356,28 @@ body {
     height: 7vh;
     width: 19.5vw; }
   .left-side-input-data {
-    font-size: 1.453rem;
+    font-size: 1.4rem;
     font-weight: 600; }
   .left-side-input:hover {
     transition: all .1s;
     background: var(--color-dark-light-form-2);
     fill: var(--color-dark-light);
     border-radius: .653rem; }
-
-hr {
-  width: 100%;
-  height: 1px;
-  background: red;
-  margin: 1.5rem 0;
-  border: 0; }
+  .left-side hr {
+    width: 90%;
+    margin: 1.5rem 0;
+    border: 1px solid var(--color-dark-light-form-2); }
+  .left-side h1 {
+    color: var(--color-text);
+    font-size: 1.4rem;
+    text-align: left;
+    width: 19vw;
+    margin: 0 0 -2rem 1rem;
+    line-height: 2.5rem; }
 
 .right-side {
-  background-color: blue;
-  width: 17vw;
+  background-color: transparent;
+  width: 22vw;
   overflow: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -385,7 +389,7 @@ hr {
   height: calc(100vh - 60px); }
 
 .btn {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   height: 5rem;
   width: 15rem;
   margin: .5rem auto;
@@ -417,7 +421,7 @@ hr {
       animation: pulsate 1s infinite; }
   .btn--white {
     text-transform: none;
-    font-size: 1.25rem; }
+    font-size: 1.4rem; }
     .btn--white:hover {
       background-color: rgba(var(--color-heading), 0.1);
       color: var(--color-primary);
