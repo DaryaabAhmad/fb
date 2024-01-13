@@ -1,6 +1,6 @@
 :root {
   --color-black: #000;
-  --color-white: #FFFFFF;
+  --color-white: #fff;
   --color-text: #E4E6EB;
   --color-svg: #B0B3B8;
   --color-white-ligth-2: #808185;
@@ -72,8 +72,7 @@ body {
   list-style: none;
   height: 5.6rem;
   background-color: var(--color-dark-light);
-  border-bottom: 1px solid #202020;
-  border-bottom: 1px solid #f4f2f2;
+  border-bottom: 1px solid var(--color-dark-light-form-2);
   top: 0;
   position: sticky;
   /*
@@ -95,7 +94,7 @@ body {
 		padding-right: 5%;
 	}*/ }
   .header-nav {
-    margin-right: 3.853rem; }
+    margin-right: 2.753rem; }
   .header-left {
     display: flex;
     align-items: center;
@@ -200,10 +199,12 @@ body {
 
 .sub-header__item {
   position: relative;
-  width: 11.535rem;
+  width: 11.935rem;
   display: flex;
   justify-content: center;
   align-items: center; }
+  .sub-header__item:first-child {
+    border-bottom: 3px solid var(--color-heading); }
 
 .sub-header__link::before {
   content: "";
@@ -218,7 +219,6 @@ body {
   width: 100%; }
 
 .sub-header__link:link, .sub-header__link:visited, .sub-header__link:active {
-  color: blue;
   text-decoration: none;
   text-transform: uppercase;
   display: block;
@@ -233,16 +233,20 @@ body {
   height: 2.35rem;
   margin: 0 .5rem;
   fill: #B0B3B8; }
+  .sub-header__icon-1 {
+    fill: var(--color-heading); }
 
-.sub-header__link:hover {
+.sub-header__item:hover {
   transition: all .1s;
   background: var(--color-dark-light-form-2);
-  fill: var(--color-dark-light);
   border-radius: 1rem;
   height: 4.753rem; }
+  .sub-header__item:hover:first-child {
+    background: transparent;
+    border-radius: 0;
+    height: auto; }
 
 .sub-header__link:active::after {
-  color: blue;
   text-decoration: none;
   text-transform: uppercase;
   display: block;
@@ -251,20 +255,6 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 3px solid yellow; }
-
-.container {
-  overflow: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth; }
-
-.container::-webkit-scrollbar {
-  width: .9rem; }
-  .container::-webkit-scrollbar-track {
-    background: transparent; }
-    .container::-webkit-scrollbar-track:hover {
-      background: var(--color-dark-light); }
-  .container::-webkit-scrollbar-thumb {
-    background: var(--color-dark-light-form-2); }
 
 /*
 .sub-header__icon {
@@ -334,10 +324,22 @@ body {
 
 */
 .container {
-  height: 90.435vh; }
+  height: 90.435vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
   .container-sub {
     display: flex;
     justify-content: space-between; }
+
+.container::-webkit-scrollbar {
+  width: .9rem; }
+  .container::-webkit-scrollbar-track {
+    background: transparent; }
+    .container::-webkit-scrollbar-track:hover {
+      background: var(--color-dark-light); }
+  .container::-webkit-scrollbar-thumb {
+    background: var(--color-dark-light-form-2); }
 
 .left-side {
   background-color: transparent;
@@ -441,6 +443,42 @@ hr {
   margin: 1.5rem 0;
   border: 1px solid var(--color-dark-light-form-2); }
 
+.mid {
+  overflow: hidden;
+  position: relative;
+  max-width: 44vw;
+  padding: 1rem 0; }
+  .mid-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 0; }
+  .mid div :nth-child(1) {
+    background-image: linear-gradient(#1f2581, #5E7FA7); }
+  .mid div :nth-child(2) {
+    background-image: linear-gradient(#000153, #5b2d8a); }
+  .mid div :nth-child(3) {
+    background-image: linear-gradient(#fff, #4E3631); }
+  .mid-2 {
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 25rem; }
+    .mid-2 .imag {
+      border-radius: 1rem;
+      background: var(--color-white);
+      height: 25rem;
+      width: 15rem;
+      margin: auto;
+      transform: scale(0.7); }
+      .mid-2 .imag:hover {
+        transform: scale(0.715);
+        transition: all .2s;
+        box-shadow: 0px 0px 150px -15px #0000005d; }
+      .mid-2 .imag:nth-child(2) {
+        height: 10rem;
+        width: 10rem; }
+
 .btn {
   font-size: 1.4rem;
   height: 5rem;
@@ -486,3 +524,14 @@ hr {
       margin: .5rem;
       text-align: center;
       border-radius: .8rem; }
+
+@keyframes ImageAnim {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.01);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
