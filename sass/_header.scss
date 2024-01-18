@@ -59,6 +59,7 @@
         align-items: center;
         // padding-right: .5rem;
         cursor: pointer;
+        justify-content: space-between;
 
 
         /*
@@ -163,6 +164,7 @@
             align-items: center;
             justify-content: center;
             margin-left: -.953rem;
+            // padding: 0 1rem;
 
             &__input {
                 font-family: inherit;
@@ -220,6 +222,7 @@
             // margin-bottom: .5rem;
             // background-color: blue;
             border-bottom: 3px solid var(--color-heading);
+            border-width: 50%;
         }
     }
 
@@ -245,7 +248,7 @@
     &__link:link,
     &__link:visited,
     &__link:active {
-        // color: blue;
+        color: var(--color-text);
         text-decoration: none;
         text-transform: uppercase;
         display: block;
@@ -288,7 +291,7 @@
     }
 
     &__link:active::after {
-        // color: blue;
+        color: yellow;
         text-decoration: none;
         text-transform: uppercase;
         display: block;
